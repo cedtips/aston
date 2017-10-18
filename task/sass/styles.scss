@@ -1,0 +1,11 @@
+$maincolor : blue;
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: $maincolor;
+}
+
+h1{ color:rgb(102, 255, 0);}
+
+@import 'button';

@@ -1,3 +1,22 @@
-<p>
-  todo works!
-</p>
+<div class="row jumbotron">
+  <div class="form-group">
+    <input type="text" 
+    class="form-control" 
+    placeholder="wtrite a task"
+    (keyup)="addTask($event)"
+    [(ngModel)]="taskText">
+  </div>
+  <ul>
+    <li class="list-group-item" *ngFor="let task of tasks;let i = index" >
+      <input type="checkbox" 
+      class="form-group" 
+      [(ngModel)]="task.done" 
+     >
+         <span [ngClass]="{textDel : task.done}" >{{ task.title}}</span>
+
+         <i class="glyphicon glyphicon-trash pull-right" (click)="removeTask(i)"></i>
+    </li>
+  </ul>
+   <small> {{ getNbTaskDone() }} / {{tasks.length}} Validé</small>
+
+</div>

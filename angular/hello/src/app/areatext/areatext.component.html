@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="well">
+        <div class="form-group">
+            <textarea [(ngModel)]="limiteText" 
+            [ngClass]="{textColor: limiteText.length >= maxLength}" 
+            class="form-control myClass" 
+            maxlength="{{ maxLength }}"
+            ></textarea>
+        </div>
+
+        <div>
+            Nombre de caracteres : {{limiteText.length}}
+        </div>
+    </div>
+</div>
+
+<!-- [style.color]="(limiteText.length == maxLength ? 'red':'black')" -->

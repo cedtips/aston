@@ -10,6 +10,7 @@ export class AppComponent {
   name = '';
   state = 'OFF';
   limiteText ='';
+  showDemo = false;
 
   clickMe() {
     this.title = 'Ma fonction rox du poney!!!';
@@ -22,12 +23,15 @@ export class AppComponent {
   }
 
   switchBtn() {
-    if(this.state == 'OFF'){
+    if(this.state === 'OFF'){
       this.state ="ON";
     } else{
       this.state = "OFF";
     }
   }
 
+    demo(){
+      this.showDemo = !this.showDemo;
+    }
 
 }

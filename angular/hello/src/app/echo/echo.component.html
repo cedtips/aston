@@ -1,0 +1,6 @@
+<app-message [simpleValue]="'mon parametre Input'" (createMessage)="onCretaMessage($event)"></app-message>
+
+<p>Ici la liste de mes messages</p>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let message of messages">{{ message.text }}</li>
+</ul>

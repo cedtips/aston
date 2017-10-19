@@ -1,10 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div class="container">
+
+  <app-echo></app-echo>
+
+  <hr>
+
   <h1>
     {{title}}!
   </h1>
 
-  <input type="text" [(ngModel)]="title">
+  <input type="text" [(ngModel)]="title" #myField>{{myField.value.length}}
   <p>{{title}}</p>
 
   <p [innerHTML]="'aston c\'est cool'" [style.color]="'red'"> Lorem ipsum dolor, sit amet </p>
@@ -27,9 +32,17 @@
   </div>
   <app-areatext></app-areatext>
 
-  <app-todo></app-todo>    
-  <app-todo></app-todo>    
-  <app-todo></app-todo>    
-  <app-todo></app-todo>    
+  <app-todo></app-todo>
+  <app-todo></app-todo>
+
+  <!-- utilisation *ngIf  -->
+  <p *ngIf="showDemo; else myTemplate">
+    Lorem ipsum
+  </p>
+  <ng-template #myTemplate>
+    <h3>patati patata !!!!</h3>
+  </ng-template>
+
+  <button (click)="demo()">Demo</button>
 
 </div>

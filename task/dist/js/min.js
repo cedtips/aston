@@ -1,1 +1,0 @@
-var name="toto";console.log(name);var name="momo";console.log("hello "+name);

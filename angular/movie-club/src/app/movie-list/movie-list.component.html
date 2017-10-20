@@ -1,0 +1,16 @@
+<ul>
+  <li class="list-group-item" *ngFor="let movie of movies.movies">
+ 
+    <div class="row">
+      <div class="col-md-4">
+           <h3 class="text-center">{{ movie.title}}</h3>
+        <img src="{{movie.imageUrl}}" alt="" class="img-responsive img-rounded " style="max-height: 250px;margin: 0 auto">
+      </div>
+      <div class="col-md-8">
+        <h3>Synopsis</h3>
+        <p > {{ movie.description }}</p>
+      </div>
+
+    </div>
+  </li>
+</ul>

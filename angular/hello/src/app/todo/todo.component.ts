@@ -22,9 +22,7 @@ export class TodoComponent implements OnInit {
 
   ngOnInit() {
     this.http.get('app/api/tasks.json')
-    .do(data => console.log(data))
-    .map(tasks => tasks.json())
-    .subscribe(data => this.jsonTask = data);
+    .subscribe(response => this.jsonTask = response.json());
   }
 
   addTask(event: KeyboardEvent) {
@@ -50,15 +48,6 @@ export class TodoComponent implements OnInit {
     }
 
     return total;
-  }
-
-  getTasks() {
-    /**
-     * do(function(data)){
-     * console.log(data);
-     * })
-     */
-   return this.jsonTask;
   }
 
 }
